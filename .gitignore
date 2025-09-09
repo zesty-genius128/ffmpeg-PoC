@@ -18,6 +18,17 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
+# iOS
+ios/build/
+ios/Pods/
+ios/*.xcworkspace
+ios/*.xcodeproj/xcuserdata/
+ios/*.xcodeproj/project.xcworkspace/xcuserdata/
+ios/DerivedData/
+
+# CocoaPods
+ios/Podfile.lock
+
 # Metro
 .metro-health-check*
 
