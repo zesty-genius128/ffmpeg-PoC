@@ -16,9 +16,8 @@ prepare_react_native_project!
 target 'ffmpegPoC' do
   use_expo_modules!
   
-  # FFmpeg-kit with basic codec support (smaller than full version)
-  # Using specific version that's available
-  pod 'ffmpeg-kit-ios-min', '6.0-LTS'
+  # Custom FFmpeg implementation (compiled binaries ~4.8MB)
+  # Using our own compiled minimal FFmpeg libraries
 
   if ENV['EXPO_USE_COMMUNITY_AUTOLINKING'] == '1'
     config_command = ['node', '-e', "process.argv=['', '', 'config'];require('@react-native-community/cli').run()"];
