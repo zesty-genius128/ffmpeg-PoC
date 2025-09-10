@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "ffmpeg-PoC",
-    "slug": "ffmpeg-PoC",
+    "name": "FFmpeg Video Merger PoC",
+    "slug": "ffmpeg-poc",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,17 +13,35 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.example.ffmpeg-poc",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "This app needs access to photo library to select and save videos for merging.",
+        "NSCameraUsageDescription": "This app needs access to camera to record videos for merging.",
+        "NSMicrophoneUsageDescription": "This app needs access to microphone to record audio with videos."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA",
+        "RECORD_AUDIO"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-av",
+      "expo-media-library", 
+      "expo-document-picker",
+      "expo-file-system"
+    ]
   }
 }
