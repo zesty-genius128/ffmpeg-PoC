@@ -1,9 +1,0 @@
-{
-  "platforms": ["ios", "android"],
-  "ios": {
-    "modules": ["FFmpegMergeModule"]
-  },
-  "android": {
-    "modules": ["FFmpegMergeModule"]
-  }
-}
